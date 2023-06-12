@@ -7,6 +7,33 @@ body {
   max-width: 1400px;
   margin: 0 auto;
 }
+.grid {
+  display: grid;
+  grid-gap: 64px;
+}
+
+.img-responsive {
+  max-width: 100%;
+  display: block;
+}
+
+.grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3-columns {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-3-columns-with-first-narrow {
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
 
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -45,7 +72,7 @@ header a {
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
-  color: #272044;
+  color: #406d8f;
   padding: 16px 32px;
   margin-top: 32px;
   display: inline-block;
@@ -55,29 +82,45 @@ header a {
   background: white;
 }
 
-@media (max-width: 900px) {
-  header {
-    padding: 60px 0;
-  }
-
-  header h1 {
-    font-size: 48px;
-  }
-
-  header h2 {
-    font-size: 20px;
-  }
-
-  header h3 {
-    font-size: 12px;
-  }
+main {
+  background: linear-gradient(111.5deg, rgb(187, 232, 255) 11.1%, rgb(4, 78, 116) 107.5%);
 }
+
+main h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  letter-spacing: 5px;
+  color: #d8c055;;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+main h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #202844;
+  margin: 0;
+}
+
+main p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #202844;
+  opacity: 0.7;
+}
+
 footer {
   color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../media/italy_morning.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../media/italy_morning.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px 0;
 }
 
 footer h3 {
@@ -90,7 +133,6 @@ footer p {
   font-weight: 400;
   font-size: 16px;
   opacity: 0.7;
-  margin-right: 20px;
   line-height: 24px;
 }
 
@@ -107,4 +149,58 @@ footer li {
 footer a {
   color: white;
   opacity: 0.7;
+}
+.card {
+  background: white;
+  margin: 30px 0;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.card-footer {
+  padding: 0 30px 30px;
+}
+
+.btn {
+  display: block;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 16px;
+  background-color: #202844;
+  text-decoration: none;
+}
+
+
+@media (max-width: 960px) {
+  header {
+    padding: 60px 0;
+  }
+
+  header h1 {
+    font-size: 48px;
+  }
+
+  header h2 {
+    font-size: 20px;
+  }
+
+  header h3 {
+    font-size: 12px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+  }
+
+  section {
+    padding: 30px;
+  }
 }
