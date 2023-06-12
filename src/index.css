@@ -13,7 +13,8 @@ body {
 }
 
 .img-responsive {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
   display: block;
 }
 
@@ -28,7 +29,19 @@ body {
 .grid-3-columns-with-first-narrow {
   grid-template-columns: 1fr 2fr 2fr;
 }
+.embed {
+  width: 100%;
+  height: 100%;
+  display: block;
+  aspect-ratio: 1/1;
+}
 
+.instagram-embeds {
+  margin: 30px 0;
+}
+.card-header.grid {
+  grid-gap: 0;
+}
 section {
   max-width: 1200px;
   margin: 0 auto;
@@ -104,6 +117,21 @@ main h3 {
   color: #202844;
   margin: 0;
 }
+main h4 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  color: #202844;
+  margin: 0;
+}
+
+main h5 {
+  font-weight: 700;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1;
+  color: #202844;
+}
 
 main p {
   font-style: normal;
@@ -154,6 +182,9 @@ footer a {
   background: white;
   margin: 30px 0;
 }
+.card-header.grid {
+  grid-gap: 0;
+}
 
 .card-body {
   padding: 30px;
@@ -203,4 +234,14 @@ footer a {
   section {
     padding: 30px;
   }
+  .card-header img {
+    display: none;
+  }
+
+  .embed {
+    aspect-ratio: 16 / 9;
+  }
+}
+.text-center{
+  text-align: center;
 }
